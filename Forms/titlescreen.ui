@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TitleScreen</class>
+ <widget class="QMainWindow" name="TitleScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>628</width>
+    <height>792</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>628</width>
+    <height>792</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>628</width>
+    <height>792</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Tic Tac Toe Session</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f8f9fa, stop:1 #e9ecef);
+}
+
+QWidget {
+    background-color: transparent;
+    color: #2c3e50;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>25</number>
+    </property>
+    <property name="leftMargin">
+     <number>40</number>
+    </property>
+    <property name="topMargin">
+     <number>30</number>
+    </property>
+    <property name="rightMargin">
+     <number>40</number>
+    </property>
+    <property name="bottomMargin">
+     <number>30</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="gameIcon">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>250</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>250</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: white;
+    border: 3px solid #34495e;
+    border-radius: 15px;
+    padding: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTop">
+     <widget class="QLabel" name="titleLabel">
+      <property name="minimumSize">
+       <size>
+        <width>548</width>
+        <height>84</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>42</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #2c3e50;
+    background-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;TIC TAC TOE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QFormLayout" name="optionsLayout">
+      <property name="horizontalSpacing">
+       <number>25</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>25</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="boardSizeLabel">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #2c3e50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Board Size</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QHBoxLayout" name="boardSizeLayout">
+        <item>
+         <widget class="QSlider" name="boardSize">
+          <property name="styleSheet">
+           <string notr="true">QSlider::groove:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #bdc3c7, stop:1 #95a5a6);
+    height: 10px;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3498db, stop:1 #2980b9);
+    border: 2px solid #2c3e50;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    margin: -8px 0;
+}
+
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3498db, stop:1 #2980b9);
+    border-radius: 5px;
+}</string>
+          </property>
+          <property name="minimum">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="value">
+           <number>3</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="boardSizeValue">
+          <property name="minimumSize">
+           <size>
+            <width>35</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background-color: #3498db;
+    color: white;
+    border-radius: 17px;
+    padding: 5px;
+}</string>
+          </property>
+          <property name="text">
+           <string>3</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="playersLabel">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #2c3e50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Number of Players</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <layout class="QVBoxLayout" name="playersLayout">
+        <item>
+         <widget class="QRadioButton" name="onePlayer">
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton {
+    font-size: 12px;
+    color: #2c3e50;
+    padding: 5px;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+QRadioButton::indicator::unchecked {
+    border: 3px solid #bdc3c7;
+    border-radius: 9px;
+    background-color: white;
+}
+
+QRadioButton::indicator::checked {
+    border: 3px solid #e74c3c;
+    border-radius: 9px;
+    background-color: #e74c3c;
+}</string>
+          </property>
+          <property name="text">
+           <string>1 Player (vs AI)</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="twoPlayers">
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton {
+    font-size: 12px;
+    color: #2c3e50;
+    padding: 5px;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+QRadioButton::indicator::unchecked {
+    border: 3px solid #bdc3c7;
+    border-radius: 9px;
+    background-color: white;
+}
+
+QRadioButton::indicator::checked {
+    border: 3px solid #e74c3c;
+    border-radius: 9px;
+    background-color: #e74c3c;
+}</string>
+          </property>
+          <property name="text">
+           <string>2 Players</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="aiStartsLabel">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #2c3e50;
+}</string>
+        </property>
+        <property name="text">
+         <string>AI starts first</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="AIStarts">
+        <property name="styleSheet">
+         <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator::unchecked {
+    border: 3px solid #bdc3c7;
+    background-color: white;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator::checked {
+    border: 3px solid #27ae60;
+    background-color: #27ae60;
+    border-radius: 3px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="difficultyLabel">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #2c3e50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Difficulty level</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <layout class="QHBoxLayout" name="difficultyLayout">
+        <item>
+         <widget class="QSlider" name="miniMaxDepth">
+          <property name="styleSheet">
+           <string notr="true">QSlider::groove:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #bdc3c7, stop:1 #95a5a6);
+    height: 10px;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #e67e22, stop:1 #d35400);
+    border: 2px solid #2c3e50;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    margin: -8px 0;
+}
+
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #e67e22, stop:1 #d35400);
+    border-radius: 5px;
+}</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>20</number>
+          </property>
+          <property name="value">
+           <number>7</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="miniMaxDepthValue">
+          <property name="minimumSize">
+           <size>
+            <width>35</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background-color: #e67e22;
+    color: white;
+    border-radius: 17px;
+    padding: 5px;
+}</string>
+          </property>
+          <property name="text">
+           <string>7</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <spacer name="leftSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startGame">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>18</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2c3e50, stop:1 #34495e);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #34495e, stop:1 #2c3e50);
+    transform: translateY(-2px);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #1a252f, stop:1 #2c3e50);
+    transform: translateY(1px);
+}</string>
+        </property>
+        <property name="text">
+         <string>Start Game</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="rightSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>howtoplay</class>
+ <widget class="QDialog" name="howtoplay">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>How to play Tic-Tac-Toe</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}</string>
+  </property>
+
+  <!-- Main Title -->
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>760</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h1 style=&quot;text-align: center; color: black; font-size: 24px; font-weight: bold; margin: 0;&quot;&gt;TIC TAC TOE&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+
+  <!-- Introduction Text -->
+  <widget class="QLabel" name="introLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>760</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p style=&quot;color: black; font-size: 12px; font-style: italic; text-align: center; margin: 3px;&quot;&gt;You probably already know how to play Tic-Tac-Toe. It's a really simple game, right? That's what most people think.&lt;/p&gt;&lt;p style=&quot;color: black; font-size: 12px; font-style: italic; text-align: center; margin: 3px;&quot;&gt;But if you really wrap your brain around it, you'll discover that Tic-Tac-Toe isn't quite as simple as you think!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+
+  <!-- Strategy Text -->
+  <widget class="QLabel" name="strategyLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>760</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p style=&quot;color: black; font-size: 12px; font-style: italic; margin: 3px;&quot;&gt;TicTacToe (along with other games) involves looking ahead, trying to figure out what the person playing against you might do next.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+
+  <!-- Rules Section -->
+  <widget class="QLabel" name="rulesLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>760</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h2 style=&quot;color: black; font-size: 16px; margin: 0 0 8px 0;&quot;&gt;Rules for Tic Tac Toe&lt;/h2&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;1) The game is played on a grid that's 3 squares by 3 squares.&lt;/p&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;2) You are X, your friend (or the computer in this case) is O.&lt;/p&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;Players take turns putting their marks in empty squares.&lt;/p&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;3) The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.&lt;/p&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;4) When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignTop</set>
+   </property>
+  </widget>
+
+  <!-- How to Win Section -->
+  <widget class="QLabel" name="winLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>460</y>
+     <width>760</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h2 style=&quot;color: black; font-size: 16px; margin: 0 0 8px 0;&quot;&gt;How can I win at Tic-Tac-Toe?&lt;/h2&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;To beat the computer (or at least tie), you need to make use of a little bit of strategy. Strategy means figuring out what you need to do to win.&lt;/p&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;Part of your strategy is trying to figure out how to get three X's in a row. The other part is trying to figure out how to stop the computer from getting three O's in a row.&lt;/p&gt;&lt;p style=&quot;color: black; font-size: 11px; margin: 2px 0;&quot;&gt;If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe. You may not win, but at least you'll tie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignTop</set>
+   </property>
+  </widget>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

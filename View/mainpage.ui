@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainPage</class>
+ <widget class="QMainWindow" name="MainPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>516</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tic Tac Toe</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+      QMainWindow { background-color: #ffffff; }
+      QLabel { font: 20pt &quot;Arial&quot;; color: #34495e; }
+      QLineEdit { border: 2px solid #bdc3c7; border-radius: 5px; padding: 5px; font: 12pt &quot;Arial&quot;; color: #34495e; }
+      QLineEdit:focus { border-color: #3498db; }
+      QCheckBox { font: 12pt &quot;Arial&quot;; color: #34495e; }
+      QPushButton { background-color: #34495e; color: #ffffff; border-radius: 5px; padding: 10px; font: 12pt &quot;Arial&quot;; }
+      QPushButton:hover { background-color: #2c3e50; }
+      QPushButton:pressed { background-color: #1f2a38; }
+     </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_title">
+      <property name="text">
+       <string>TIC TAC TOE</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_game">
+      <property name="styleSheet">
+       <string>font: 24pt &quot;Arial&quot;; color: #34495e;</string>
+      </property>
+      <property name="text">
+       <string>○×○
+×○×
+×○○</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_signin">
+      <property name="text">
+       <string>Sign In</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="lineEdit_username">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="lineEdit_password">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>User Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_showpassword">
+      <property name="text">
+       <string>Show password</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_login">
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_signup">
+      <property name="text">
+       <string>Create New Account</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

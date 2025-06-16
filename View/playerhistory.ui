@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Playerhistory</class>
+ <widget class="QDialog" name="Playerhistory">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>641</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QComboBox" name="gameComboBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>280</y>
+     <width>541</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: white;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 12px;
+    color: #333333;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #666666;
+    margin-right: 10px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="return_2">
+   <property name="geometry">
+    <rect>
+     <x>265</x>
+     <y>340</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+        background-color: #2c5f7a;
+        color: white;
+        border-style: solid;
+        border-radius: 20px;
+        border: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        font-size: 14px;
+}
+
+QPushButton::hover
+{
+        background-color: #1e4a5f;
+        color: white;
+}
+
+QPushButton::pressed
+{
+        background-color: #0f3a4f;
+        color: white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Return</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>541</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>36</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #2c5f7a;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>TIC TAC TOE</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>541</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>18</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gamesPlayedLabel">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>150</y>
+     <width>150</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>Games Played</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameplayedd">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>150</y>
+     <width>50</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gamesWonLabel">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>190</y>
+     <width>141</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>Games Won</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="winsLabel">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>190</y>
+     <width>30</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gamesLoseLabel">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>190</y>
+     <width>151</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>Games Lose</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lossesLabel">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>190</y>
+     <width>30</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gamesDrawnLabel">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>230</y>
+     <width>171</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>Games Drawn</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="drawsLabel">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>230</y>
+     <width>30</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #333333;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
