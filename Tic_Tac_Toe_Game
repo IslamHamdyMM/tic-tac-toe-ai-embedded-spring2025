@@ -1,0 +1,14 @@
+📂 Project Description
+This is the full source code for the Advanced Tic Tac Toe Game developed in C++ using the Qt framework. The project includes:
+
+🎮 Game logic, AI (minimax), and GUI (Qt .ui files)
+
+👥 User authentication and game history tracking
+
+📊 Performance measurement modules
+
+🧪 Modular code structure: Model, View, Controller, and AI
+
+🧪 Testing and documentation ready for CI/CD with GitHub Actions
+
+All source files follow OOP principles and are organized in a scalable and testable structure.
